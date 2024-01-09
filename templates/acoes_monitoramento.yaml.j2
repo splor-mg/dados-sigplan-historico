@@ -1,0 +1,128 @@
+fields:
+  - name: Ano Monitoramento
+    type: integer
+  - name: Mês Inicial
+    type: integer
+  - name: Mês Final
+    type: integer
+  - name: Setor de Governo
+    type: string
+  - name: Código do Programa
+    type: integer
+  - name: Nome do Programa
+    type: string
+  - name: Código da Unidade Orçamentária Responsável pelo Programa
+    type: integer
+  - name: Unidade Orçamentária Responsável pelo Programa
+    type: string
+  - name: Código da Unidade Orçamentária Responsável pela Ação
+    type: integer
+  - name: Unidade Orçamentária Responsável pela Ação
+    type: string
+  - name: Código da Área Temática
+    type: integer
+  - name: Área Temática
+    type: string
+  - name: Código da Função
+    type: integer
+  - name: Função
+    type: string
+  - name: Código da Subfunção
+    type: integer
+  - name: Subfunção
+    type: string
+  - name: Código da Ação
+    type: integer
+  - name: Título da Ação
+    type: string
+  - name: Meta não cumulativa?
+    type: string
+  - name: Código do Tipo de Ação
+    type: integer
+  - name: Tipo de Ação
+    type: string
+  - name: Finalidade da Ação
+    type: string
+  - name: Código do Identificador de Ação Governamental (IAG)
+    type: integer
+  - name: Identificador de Ação Governamental (IAG)
+    type: string
+  - name: Código do Projeto Estratégico
+    type: integer
+  - name: Projeto Estratégico
+    type: string
+  - name: Código do Público-alvo
+    type: integer
+  - name: Público-alvo
+    type: string
+  - name: Código do Produto
+    type: integer
+  - name: Produto
+    type: string
+  - name: Código da Unidade de Medida do Produto
+    type: integer
+  - name: Unidade de Medida do Produto
+    type: string
+  - name: Previsão Orçamentária {{ period }} (LOA)
+    type: number
+    decimalChar: ","
+  - name: Orç. Programado Inicial de {{ months[0] }} a {{ months[-1] }}
+    type: number
+    decimalChar: ","
+    {% for month in months %}
+  - name: Prog. Inicial Outras Desp. {{ month }}
+    type: number
+    decimalChar: ","
+    {% endfor %}
+  - name: Total Prog. Inicial Outras Desp.
+    type: number
+    decimalChar: ","
+    {% for month in months %}
+  - name: Prog. Inicial Desp. Pessoal e Auxílios {{ month }}
+    type: number
+    decimalChar: ","
+    {% endfor %}
+  - name: Total Prog. Inicial Desp. Pessoal e Auxílios
+    type: number
+    decimalChar: ","
+    {% for month in months %}
+  - name: Desp. Realizada {{ month }}
+    type: number
+    decimalChar: ","
+    {% endfor %}
+  - name: Crédito Autorizado {{ period }} (LOA + Créditos)
+    type: number
+    decimalChar: ","
+  - name: Despesa Realizada {{ period }}
+    type: number
+    decimalChar: ","
+  - name: Previsão Física {{ period }}
+    type: integer
+  - name: Fis Programado Inicial de {{ months[0] }}  a {{ months[-1] }}
+    type: integer
+  - name: Meta Física Reprogramada
+    type: integer
+    {% for month in months %}
+  - name: Fis Realizado {{ month }}
+    type: integer
+    {% endfor %}
+  - name: Realização Física {{ period }}
+    type: integer
+    {% for month in months %}
+  - name: Pessoa Remunerada {{ month }}
+    type: integer
+    {% endfor %}
+  - name: Realização Pessoa Remunerada
+    type: integer
+  - name: Último mês de maior execução
+    type: integer
+  - name: Ação Não Regionalizada?
+    type: string
+  - name: Justificativa da Não Regionalização
+    type: string
+  - name: Objetivo
+    type: string
+  - name: Ação Transposta Durante Exercício
+    type: string
+  - name: ""
+    type: any

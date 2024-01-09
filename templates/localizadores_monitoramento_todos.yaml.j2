@@ -1,0 +1,114 @@
+fields:
+  - name: Ano Monitoramento
+    type: integer
+  - name: Mês Inicial
+    type: integer
+  - name: Mês Final
+    type: integer
+  - name: Setor de Governo
+    type: string
+  - name: Código do Programa
+    type: integer
+  - name: Nome do Programa
+    type: string
+  - name: Código da Unidade Orçamentária Responsável pelo Programa
+    type: integer
+  - name: Unidade Orçamentária Responsável pelo Programa
+    type: string
+  - name: Código da Unidade Orçamentária Responsável pela Ação
+    type: integer
+  - name: Unidade Orçamentária Responsável pela Ação
+    type: string
+  - name: Código da Área Temática
+    type: integer
+  - name: Área Temática
+    type: string
+  - name: Código da Função
+    type: integer
+  - name: Função
+    type: string
+  - name: Código da Subfunção
+    type: integer
+  - name: Subfunção
+    type: string
+  - name: Código da Ação
+    type: integer
+  - name: Título da Ação
+    type: string
+  - name: Meta não cumulativa?
+    type: string
+  - name: Código do Tipo de Ação
+    type: integer
+  - name: Tipo de Ação
+    type: string
+  - name: Finalidade da Ação
+    type: string
+  - name: Código do Identificador de Ação Governamental (IAG)
+    type: integer
+  - name: Identificador de Ação Governamental (IAG)
+    type: string
+  - name: Código do Projeto Estratégico
+    type: any
+  - name: Projeto Estratégico
+    type: any
+  - name: Código do Público-alvo
+    type: integer
+  - name: Público-alvo
+    type: string
+  - name: Código do Produto
+    type: integer
+  - name: Produto
+    type: string
+  - name: Código da Unidade de Medida do Produto
+    type: integer
+  - name: Unidade de Medida do Produto
+    type: string
+  - name: Código da Região Geográfica Intermediária
+    type: integer
+  - name: Região Geográfica Intermediária
+    type: string
+  - name: Código do Município IBGE
+    type: integer
+  - name: Código do Município Sigplan
+    type: integer
+  - name: Município
+    type: string
+  {% for month in months %}
+  - name: Desp. Realizada Investimento {{ month }}
+    type: number
+    decimalChar: ","
+  - name: Desp. Realizada Outros {{ month }}
+    type: number
+    decimalChar: ","
+  - name: Desp. Realizada Pessoal e Auxílios {{ month }}
+    type: number
+    decimalChar: ","
+  - name: Desp. Realizada {{ month }}
+    type: number
+    decimalChar: ","
+  {% endfor %}
+  - name: Despesa Realizada Investimento {{ period }}
+    type: number
+    decimalChar: ","
+  - name: Despesa Realizada Outros {{ period }}
+    type: number
+    decimalChar: ","
+  - name: Despesa Realizada Pessoal e Auxílios {{ period }}
+    type: number
+    decimalChar: ","
+  - name: Despesa Realizada Total {{ period }}
+    type: string
+  - name: Previsão Física Inicial
+    type: integer
+  {% for month in months %}
+  - name: Fis Realizado {{ month }}
+    type: integer
+  {% endfor %}
+  - name: Realização Física {{ period }}
+    type: integer
+  {% for month in months %}
+  - name: Pessoa Remunerada {{ month }}
+    type: integer
+  {% endfor %}
+  - name: ""
+    type: any
