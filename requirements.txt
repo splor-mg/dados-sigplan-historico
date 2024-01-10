@@ -33,7 +33,9 @@ idna==3.6
 isodate==0.6.1
     # via frictionless
 jinja2==3.1.2
-    # via frictionless
+    # via
+    #   -r requirements.in
+    #   frictionless
 jsonschema==4.17.3
     # via frictionless
 markdown-it-py==3.0.0
@@ -47,7 +49,9 @@ mdurl==0.1.2
 numpy==1.26.3
     # via pandas
 pandas==2.1.4
-    # via frictionless
+    # via
+    #   dpm
+    #   frictionless
 petl==1.7.14
     # via frictionless
 pydantic==2.5.3

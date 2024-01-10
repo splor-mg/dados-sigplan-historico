@@ -1,80 +1,118 @@
 fields:
   - name: Ano Monitoramento
+    target: ano
     type: integer
   - name: Mês Inicial
+    target: mes_inicial
     type: integer
   - name: Mês Final
+    target: mes_final
     type: integer
   - name: Setor de Governo
+    target: setor_governo
     type: string
   - name: Código do Programa
+    target: programa_cod
     type: integer
   - name: Nome do Programa
+    target: programa_desc
     type: string
   - name: Código da Unidade Orçamentária Responsável pelo Programa
+    target: uo_programa_cod
     type: integer
   - name: Unidade Orçamentária Responsável pelo Programa
+    target: uo_programa_nome
     type: string
   - name: Código da Unidade Orçamentária Responsável pela Ação
+    target: uo_acao_cod
     type: integer
   - name: Unidade Orçamentária Responsável pela Ação
+    target: uo_acao_nome
     type: string
   - name: Código da Área Temática
+    target: area_tematica_cod
     type: integer
   - name: Área Temática
+    target: area_tematica_desc
     type: string
   - name: Código da Função
+    target: funcao_cod
     type: integer
   - name: Função
+    target: funcao_desc
     type: string
   - name: Código da Subfunção
+    target: subfuncao_cod
     type: integer
   - name: Subfunção
+    target: subfuncao_desc
     type: string
   - name: Código da Ação
+    target: acao_cod
     type: integer
   - name: Título da Ação
+    target: acao_desc
     type: string
   - name: Meta não cumulativa?
-    type: string
+    target: is_meta_cumulativa
+    type: boolean
+    trueValues: ['SIM']
+    falseValues: ['NÃO']
   - name: Código do Tipo de Ação
+    target: identificador_tipo_acao_cod
     type: integer
   - name: Tipo de Ação
+    target: identificador_tipo_acao_desc
     type: string
   - name: Finalidade da Ação
+    target: acao_finalidade
     type: string
   - name: Código do Identificador de Ação Governamental (IAG)
+    target: iag_cod
     type: integer
   - name: Identificador de Ação Governamental (IAG)
+    target: iag_desc
     type: string
   - name: Código do Projeto Estratégico
+    target: projeto_estrategico_cod
     type: integer
   - name: Projeto Estratégico
+    target: projeto_estrategico_desc
     type: string
   - name: Código do Público-alvo
+    target: publico_alvo_cod
     type: integer
   - name: Público-alvo
+    target: publico_alvo_desc
     type: string
   - name: Código do Produto
+    target: produto_cod
     type: integer
   - name: Produto
+    target: produto_desc
     type: string
   - name: Código da Unidade de Medida do Produto
+    target: produto_unidade_medida_cod
     type: integer
   - name: Unidade de Medida do Produto
+    target: produto_unidade_medida_desc
     type: string
   - name: Previsão Orçamentária {{ period }} (LOA)
+    target: vlr_previsao_orcamentaria
     type: number
     decimalChar: ","
   - name: Orç. Programado Inicial de {{ months[0] }} a {{ months[-1] }}
+    target: vlr_programado_inicial_{{ months[0]|lower }}_{{ months[-1]|lower }}
     type: number
     decimalChar: ","
     {% for month in months %}
   - name: Prog. Inicial Outras Desp. {{ month }}
+    target: vlr_outras_despesas_{{ month|lower }}
     type: number
     decimalChar: ","
     {% endfor %}
   - name: Total Prog. Inicial Outras Desp.
+    tagert: vlr_programado_inicial_outras_despesas
     type: number
     decimalChar: ","
     {% for month in months %}
