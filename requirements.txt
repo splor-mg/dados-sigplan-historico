@@ -20,7 +20,7 @@ click==8.1.7
     # via typer
 colorama==0.4.6
     # via typer
-dpm @ git+https://github.com/splor-mg/dpm.git@main
+dpm @ git+https://github.com/splor-mg/dpm.git@normalize
     # via -r requirements.in
 frictionless[pandas]==5.16.0
     # via
