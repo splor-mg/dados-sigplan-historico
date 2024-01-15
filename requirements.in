@@ -1,3 +1,3 @@
-git+https://github.com/splor-mg/dpm.git@main
+git+https://github.com/splor-mg/dpm.git@normalize
 frictionless[pandas]
 jinja2
