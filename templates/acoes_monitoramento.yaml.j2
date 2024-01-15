@@ -98,69 +98,89 @@ fields:
     target: produto_unidade_medida_desc
     type: string
   - name: Previsão Orçamentária {{ period }} (LOA)
-    target: vlr_previsao_orcamentaria
+    target: vlr_credito_inicial
     type: number
     decimalChar: ","
   - name: Orç. Programado Inicial de {{ months[0] }} a {{ months[-1] }}
-    target: vlr_programado_inicial_{{ months[0]|lower }}_{{ months[-1]|lower }}
+    target: vlr_prog_inicial_{{ months[0]|lower }}_{{ months[-1]|lower }}
     type: number
     decimalChar: ","
     {% for month in months %}
   - name: Prog. Inicial Outras Desp. {{ month }}
-    target: vlr_outras_despesas_{{ month|lower }}
+    target: vlr_prog_inicial_outras_despesas_{{ month|lower }}
     type: number
     decimalChar: ","
     {% endfor %}
   - name: Total Prog. Inicial Outras Desp.
-    tagert: vlr_programado_inicial_outras_despesas
+    target: vlr_prog_inicial_outras_despesas
     type: number
     decimalChar: ","
     {% for month in months %}
   - name: Prog. Inicial Desp. Pessoal e Auxílios {{ month }}
+    target: vlr_prog_inicial_pessoal_auxilios_{{ month|lower }}
     type: number
     decimalChar: ","
     {% endfor %}
   - name: Total Prog. Inicial Desp. Pessoal e Auxílios
+    target: vlr_prog_inicial_pessoal_auxilios
     type: number
     decimalChar: ","
     {% for month in months %}
   - name: Desp. Realizada {{ month }}
+    target: vlr_despesa_realizada_{{ month|lower }}
     type: number
     decimalChar: ","
     {% endfor %}
   - name: Crédito Autorizado {{ period }} (LOA + Créditos)
+    target: vlr_credito_autorizado
     type: number
     decimalChar: ","
   - name: Despesa Realizada {{ period }}
+    target: vlr_despesa_realizada
     type: number
     decimalChar: ","
   - name: Previsão Física {{ period }}
+    target: vlr_previsao_fisica
     type: integer
   - name: Fis Programado Inicial de {{ months[0] }}  a {{ months[-1] }}
+    target: vlr_prog_fisica_inicial
     type: integer
   - name: Meta Física Reprogramada
+    target: vlr_meta_fisica_reprogramada
     type: integer
     {% for month in months %}
   - name: Fis Realizado {{ month }}
+    target: vlr_fisico_realizado_{{ month|lower }}
     type: integer
     {% endfor %}
   - name: Realização Física {{ period }}
+    target: vlr_fisico_realizado
     type: integer
     {% for month in months %}
   - name: Pessoa Remunerada {{ month }}
+    target: vlr_pessoa_remunerada_{{ month|lower }}
     type: integer
     {% endfor %}
   - name: Realização Pessoa Remunerada
+    target: vlr_realizacao_pessoa_remunerada
     type: integer
   - name: Último mês de maior execução
+    target: ultimo_mes_maior_execucao
     type: integer
   - name: Ação Não Regionalizada?
-    type: string
+    target: is_acao_nao_regionalizada
+    type: boolean
+    trueValues: ['SIM']
+    falseValues: ['NÃO']
   - name: Justificativa da Não Regionalização
+    target: justificativa_nao_regionalizacao
     type: string
   - name: Objetivo
+    target: objetivo
     type: string
   - name: Ação Transposta Durante Exercício
+    target: is_acao_transposta_durante_exercicio
     type: string
   - name: ""
+    target: empty_column
     type: any
