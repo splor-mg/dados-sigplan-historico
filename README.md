@@ -18,4 +18,5 @@ dpm concat --resource-name acoes_monitoramento --enrich ppag=period \
 
 ```bash
 dpm concat datapackages/planejamento*/**/datapackage.json --resource-name indicadores_planejamento --enrich ppag=period
+dpm concat datapackages/monitoramento*/**/datapackage.json --resource-name relacao_indicadores_apurados --enrich ppag=period
 ```

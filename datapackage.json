@@ -1,153 +1,153 @@
 {
-    "name": "sigplan",
-    "profile": "tabular-data-package",
-    "resources": [
-      {
-        "name": "indicadores_planejamento",
-        "profile": "tabular-data-resource",
-        "path": "data/indicadores_planejamento.csv",
-        "format": "csv",
-        "encoding": "utf-8",
-        "schema": {
-          "fields": [
-            {
-              "name": "programa_cod",
-              "type": "integer",
-              "source": "Código do Programa"
-            },
-            {
-              "name": "programa_nome",
-              "type": "string",
-              "source": "Nome do Programa"
-            },
-            {
-              "name": "is_deleted_programa",
-              "type": "boolean",
-              "source": "Exclusão Lógica do Programa"
-            },
-            {
-              "name": "indicador",
-              "type": "string",
-              "source": "Indicador"
-            },
-            {
-              "name": "is_deleted_indicador",
-              "type": "boolean",
-              "source": "Exclusão Lógica do Indicador"
-            },
-            {
-              "name": "unidade_de_medida",
-              "type": "string",
-              "source": "Unidade de Medida"
-            },
-            {
-              "name": "indice_de_referencia",
-              "type": "number",
-              "source": "Índice de Referência"
-            },
-            {
-              "name": "is_em_apuracao_indice_de_referencia",
-              "type": "boolean",
-              "source": "Em apuração? (Índice de Referência)"
-            },
-            {
-              "name": "dt_apuracao",
-              "type": "date",
-              "source": "Data de Apuração"
-            },
-            {
-              "name": "previsao_para_ano0",
-              "type": "number",
-              "source": "Previsão para Ano 0"
-            },
-            {
-              "name": "is_em_apuracao_ano0",
-              "type": "boolean",
-              "source": "Em apuração? (Ano 0)"
-            },
-            {
-              "name": "previsao_para_ano1",
-              "type": "number",
-              "source": "Previsão para Ano 1"
-            },
-            {
-              "name": "is_em_apuracao_ano1",
-              "type": "boolean",
-              "source": "Em apuração? (Ano 1)"
-            },
-            {
-              "name": "previsao_para_ano2",
-              "type": "number",
-              "source": "Previsão para Ano 2"
-            },
-            {
-              "name": "is_em_apuracao_ano2",
-              "type": "boolean",
-              "source": "Em apuração? (Ano 2)"
-            },
-            {
-              "name": "previsao_para_ano3",
-              "type": "number",
-              "source": "Previsão para Ano 3"
-            },
-            {
-              "name": "is_em_apuracao_ano3",
-              "type": "boolean",
-              "source": "Em apuração? (Ano 3)"
-            },
-            {
-              "name": "fonte",
-              "type": "string",
-              "source": "Fonte"
-            },
-            {
-              "name": "periodicidade",
-              "type": "string",
-              "source": "Periodicidade"
-            },
-            {
-              "name": "base_geografica",
-              "type": "string",
-              "source": "Base Geográfica"
-            },
-            {
-              "name": "formula_de_calculo",
-              "type": "string",
-              "source": "Fórmula de Cálculo"
-            },
-            {
-              "name": "justificativa_status_apuracao_previsoes",
-              "type": "string",
-              "source": "Justificativa do Status em apuração da(s) Previsão(es) do(s) Índice(s)"
-            },
-            {
-              "name": "justificativa_status_apuracao_indice_ref",
-              "type": "string",
-              "source": "Justificativa do Status em apuração do Índice de Referência"
-            },
-            {
-              "name": "updated_at",
-              "type": "datetime",
-              "source": "Data Alteração"
-            },
-            {
-              "name": "is_indicador_new",
-              "type": "boolean",
-              "source": "Indicador Novo?"
-            },
-            {
-              "name": "polaridade",
-              "type": "string",
-              "source": "Polaridade"
-            },
-            {
-              "name": "ppag",
-              "type": "string"
-            }
-          ]
-        }
-      },
-      {
+  "name": "sigplan",
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "indicadores_planejamento",
+      "profile": "tabular-data-resource",
+      "path": "data/indicadores_planejamento.csv",
+      "format": "csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "programa_cod",
+            "type": "integer",
+            "source": "Código do Programa"
+          },
+          {
+            "name": "programa_nome",
+            "type": "string",
+            "source": "Nome do Programa"
+          },
+          {
+            "name": "is_deleted_programa",
+            "type": "boolean",
+            "source": "Exclusão Lógica do Programa"
+          },
+          {
+            "name": "indicador",
+            "type": "string",
+            "source": "Indicador"
+          },
+          {
+            "name": "is_deleted_indicador",
+            "type": "boolean",
+            "source": "Exclusão Lógica do Indicador"
+          },
+          {
+            "name": "unidade_de_medida",
+            "type": "string",
+            "source": "Unidade de Medida"
+          },
+          {
+            "name": "indice_de_referencia",
+            "type": "number",
+            "source": "Índice de Referência"
+          },
+          {
+            "name": "is_em_apuracao_indice_de_referencia",
+            "type": "boolean",
+            "source": "Em apuração? (Índice de Referência)"
+          },
+          {
+            "name": "dt_apuracao",
+            "type": "date",
+            "source": "Data de Apuração"
+          },
+          {
+            "name": "previsao_para_ano0",
+            "type": "number",
+            "source": "Previsão para Ano 0"
+          },
+          {
+            "name": "is_em_apuracao_ano0",
+            "type": "boolean",
+            "source": "Em apuração? (Ano 0)"
+          },
+          {
+            "name": "previsao_para_ano1",
+            "type": "number",
+            "source": "Previsão para Ano 1"
+          },
+          {
+            "name": "is_em_apuracao_ano1",
+            "type": "boolean",
+            "source": "Em apuração? (Ano 1)"
+          },
+          {
+            "name": "previsao_para_ano2",
+            "type": "number",
+            "source": "Previsão para Ano 2"
+          },
+          {
+            "name": "is_em_apuracao_ano2",
+            "type": "boolean",
+            "source": "Em apuração? (Ano 2)"
+          },
+          {
+            "name": "previsao_para_ano3",
+            "type": "number",
+            "source": "Previsão para Ano 3"
+          },
+          {
+            "name": "is_em_apuracao_ano3",
+            "type": "boolean",
+            "source": "Em apuração? (Ano 3)"
+          },
+          {
+            "name": "fonte",
+            "type": "string",
+            "source": "Fonte"
+          },
+          {
+            "name": "periodicidade",
+            "type": "string",
+            "source": "Periodicidade"
+          },
+          {
+            "name": "base_geografica",
+            "type": "string",
+            "source": "Base Geográfica"
+          },
+          {
+            "name": "formula_de_calculo",
+            "type": "string",
+            "source": "Fórmula de Cálculo"
+          },
+          {
+            "name": "justificativa_status_apuracao_previsoes",
+            "type": "string",
+            "source": "Justificativa do Status em apuração da(s) Previsão(es) do(s) Índice(s)"
+          },
+          {
+            "name": "justificativa_status_apuracao_indice_ref",
+            "type": "string",
+            "source": "Justificativa do Status em apuração do Índice de Referência"
+          },
+          {
+            "name": "updated_at",
+            "type": "datetime",
+            "source": "Data Alteração"
+          },
+          {
+            "name": "is_indicador_new",
+            "type": "boolean",
+            "source": "Indicador Novo?"
+          },
+          {
+            "name": "polaridade",
+            "type": "string",
+            "source": "Polaridade"
+          },
+          {
+            "name": "ppag",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
       "name": "acoes_monitoramento",
       "profile": "tabular-data-resource",
       "path": "data/acoes_monitoramento.csv",
@@ -701,15 +701,205 @@
             "source": ""
           },
           {
-              "name": "ppag",
-              "type": "string"
-          }          
+            "name": "ppag",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "relacao_indicadores_apurados",
+      "profile": "tabular-data-resource",
+      "path": "data/relacao_indicadores_apurados.csv",
+      "format": "csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "programa_cod",
+            "type": "integer",
+            "source": "Código do Programa"
+          },
+          {
+            "name": "programa_nome",
+            "type": "string",
+            "source": "Nome do Programa"
+          },
+          {
+            "name": "uo_programa_cod",
+            "type": "integer",
+            "source": "Código da Unidade Orçamentária Responsável pelo Programa"
+          },
+          {
+            "name": "uo_programa_nome",
+            "type": "string",
+            "source": "Unidade Orçamentária Responsável pelo Programa"
+          },
+          {
+            "name": "orgao_programa_cod",
+            "type": "integer",
+            "source": "Código do Órgão Responsável pelo Programa"
+          },
+          {
+            "name": "orgao_programa_nome",
+            "type": "string",
+            "source": "Órgão Responsável pelo Programa"
+          },
+          {
+            "name": "objetivo",
+            "type": "string",
+            "source": "Objetivo"
+          },
+          {
+            "name": "tipo_de_programa_cod",
+            "type": "integer",
+            "source": "Código do Tipo de Programa"
+          },
+          {
+            "name": "tipo_de_programa",
+            "type": "string",
+            "source": "Tipo de Programa"
+          },
+          {
+            "name": "area_tematica_cod",
+            "type": "integer",
+            "source": "Código da Área Temática"
+          },
+          {
+            "name": "area_tematica_desc",
+            "type": "string",
+            "source": "Área Temática"
+          },
+          {
+            "name": "indicador_cod",
+            "type": "integer",
+            "source": "Código do Indicador"
+          },
+          {
+            "name": "indicador",
+            "type": "string",
+            "source": "Indicador"
+          },
+          {
+            "name": "unidade_de_medida_cod",
+            "type": "integer",
+            "source": "Código da Unidade de Medida"
+          },
+          {
+            "name": "unidade_de_medida",
+            "type": "string",
+            "source": "Unidade de Medida"
+          },
+          {
+            "name": "base_geografica_cod",
+            "type": "integer",
+            "source": "Código da Base Geográfica"
+          },
+          {
+            "name": "base_geografica",
+            "type": "string",
+            "source": "Base Geográfica"
+          },
+          {
+            "name": "periodicidade_cod",
+            "type": "integer",
+            "source": "Código da Periodicidade"
+          },
+          {
+            "name": "periodicidade",
+            "type": "string",
+            "source": "Periodicidade"
+          },
+          {
+            "name": "is_em_apuracao_indice_referencia",
+            "type": "boolean",
+            "source": "Em apuração? (Índice de Referência)"
+          },
+          {
+            "name": "dt_apuracao_indice_referencia",
+            "type": "string",
+            "source": "Data de Apuração (Índice de Referência)"
+          },
+          {
+            "name": "indice_de_referencia",
+            "type": "number",
+            "source": "Índice de Referência"
+          },
+          {
+            "name": "polaridade",
+            "type": "string",
+            "source": "Polaridade"
+          },
+          {
+            "name": "previsao_ano0",
+            "type": "number",
+            "source": "Previsão para 2020"
+          },
+          {
+            "name": "apurado_ano0",
+            "type": "number",
+            "source": "Apurado 2020"
+          },
+          {
+            "name": "previsao_ano1",
+            "type": "number",
+            "source": "Previsão para 2021"
+          },
+          {
+            "name": "apurado_ano1",
+            "type": "number",
+            "source": "Apurado 2021"
+          },
+          {
+            "name": "previsao_ano2",
+            "type": "number",
+            "source": "Previsão para 2022"
+          },
+          {
+            "name": "apurado_ano2",
+            "type": "number",
+            "source": "Apurado 2022"
+          },
+          {
+            "name": "previsao_ano3",
+            "type": "number",
+            "source": "Previsão para 2023"
+          },
+          {
+            "name": "apurado_ano3",
+            "type": "number",
+            "source": "Apurado 2023"
+          },
+          {
+            "name": "fonte",
+            "type": "string",
+            "source": "Fonte"
+          },
+          {
+            "name": "formula_de_calculo",
+            "type": "string",
+            "source": "Fórmula de Cálculo"
+          },
+          {
+            "name": "notas_do_usuario",
+            "type": "string",
+            "source": "Notas do Usuário"
+          },
+          {
+            "name": "empty_column",
+            "type": "any",
+            "source": ""
+          },
+          {
+            "name": "ppag",
+            "type": "string"
+          }
         ]
       }
     }
-    ],
-    "temporal": {
-        "start": "2020-01",
-        "end": "2023-06"
-      }
+  ],
+  "temporal": {
+    "start": "2020-01",
+    "end": "2023-06"
   }
+}

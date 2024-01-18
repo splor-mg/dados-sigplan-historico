@@ -12,7 +12,7 @@ def render_schema_planejamento(package_name, resource_name, period):
     with open(f"datapackages/{package_name}{period}/schemas/{resource_name}.yaml", 'w', encoding='utf-8') as fs:
         fs.write(result)
 
-def render_schema_monitoramento(package_name, resource_name, period, months):
+def render_schema_monitoramento(package_name, resource_name, period, months = None):
     """
     Render table schema of monitoramento datasets
 
@@ -35,6 +35,7 @@ render_schema_monitoramento("monitoramento",
                             "localizadores_monitoramento_todos", 2020, 
                             months = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"])
 
+render_schema_monitoramento("monitoramento", "relacao_indicadores_apurados", 2020)
 
 render_schema_monitoramento("monitoramento", 
                             "acoes_monitoramento", 2021, 
@@ -44,6 +45,7 @@ render_schema_monitoramento("monitoramento",
                             "localizadores_monitoramento_todos", 2021, 
                             months = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"])
 
+render_schema_monitoramento("monitoramento", "relacao_indicadores_apurados", 2021)
 
 render_schema_monitoramento("monitoramento", 
                             "acoes_monitoramento", 2022, 
@@ -53,6 +55,7 @@ render_schema_monitoramento("monitoramento",
                             "localizadores_monitoramento_todos", 2022, 
                             months = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"])
 
+render_schema_monitoramento("monitoramento", "relacao_indicadores_apurados", 2022)
 
 render_schema_monitoramento("monitoramento", 
                             "acoes_monitoramento", 2023, 
@@ -61,3 +64,5 @@ render_schema_monitoramento("monitoramento",
 render_schema_monitoramento("monitoramento", 
                             "localizadores_monitoramento_todos", 2023, 
                             months = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"])
+
+render_schema_monitoramento("monitoramento", "relacao_indicadores_apurados", 2023)
