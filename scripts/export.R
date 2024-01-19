@@ -1,7 +1,7 @@
 library(frictionless)
 library(dplyr)
 
-package <- read_package("datapackage.json")
+package <- read_package("https://raw.githubusercontent.com/splor-mg/sigplan-dados-historico/main/datapackage.json")
 
 acoes_monitoramento <- read_resource(package, "acoes_monitoramento")
 
@@ -20,7 +20,7 @@ acoes_monitoramento |>
          vlr_fisico_realizado, 
          ppag)
 
-relacao_indicadores_apurados <- read_resource(dp, "relacao_indicadores_apurados")
+relacao_indicadores_apurados <- read_resource(package, "relacao_indicadores_apurados")
 
 relacao_indicadores_apurados |> 
   select(programa_cod,
