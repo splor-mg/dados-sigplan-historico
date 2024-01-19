@@ -1,5 +1,4 @@
 library(frictionless)
-library(data.table)
 library(dplyr)
 
 package <- read_package("datapackage.json")
@@ -17,15 +16,21 @@ acoes_monitoramento |>
          vlr_credito_inicial,
          vlr_credito_autorizado,
          vlr_despesa_realizada,
-         vlr_prog_fisica_inicial, # this is not comparable between bimesters
          vlr_previsao_fisica,
          vlr_fisico_realizado, 
-         ppag) |> 
-  filter(acao_cod == 4428)
+         ppag)
 
-indicadores_planejamento <- read_resource(package, "indicadores_planejamento")
+relacao_indicadores_apurados <- read_resource(dp, "relacao_indicadores_apurados")
 
-indicadores_planejamento |> 
-  filter()
-
-
+relacao_indicadores_apurados |> 
+  select(programa_cod,
+         programa_nome,
+         indicador,
+         unidade_de_medida,
+         polaridade,
+         dt_apuracao_indice_referencia,
+         indice_de_referencia,
+         previsao_ano0,
+         apurado_ano0,
+         notas_do_usuario
+        )
