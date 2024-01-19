@@ -18,5 +18,4 @@ datapackages/monitoramento%/datapackage.json: datapackages/monitoramento%/datapa
 	dpm normalize $< --output-dir datapackages/monitoramento$*/ --data-dir datapackages/monitoramento$*/data
 
 concat:
-	dpm concat datapackages/monitoramento*/**/datapackage.json --resource-name acoes_monitoramento --enrich ppag=period
-	dpm concat datapackages/monitoramento*/**/datapackage.json --resource-name relacao_indicadores_apurados --enrich ppag=period
+	dpm concat datapackages/monitoramento*/**/datapackage.json --resource-name acoes_monitoramento --resource-name relacao_indicadores_apurados --enrich ppag=period

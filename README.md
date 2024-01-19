@@ -1,22 +1,21 @@
 # Série histórica bases SIGPLAN
 
+Os schemas das bases de dados do SIGPLAN são diferentes entre os bimestres e anos tanto em relação a quantidade de colunas quanto ao nomes das mesmas. Para gerar o schema adequado para cada ano depois de fazer unzip da pasta `datapackages.tar.gz` execute:
+
 ```bash
 python3 scripts/render_template.py
 ```
+
+Para normalizar os nomes das colunas de tal forma que seja possível empilhar os vários anos execute:
 
 ```bash
 make normalize
 ```
 
-```bash
-dpm concat --resource-name acoes_monitoramento --enrich ppag=period \
-           --package datapackages/monitoramento2020/datapackage.json \
-           --package datapackages/monitoramento2021/datapackage.json \
-           --package datapackages/monitoramento2022/datapackage.json \
-           --package datapackages/monitoramento2023/datapackage.json
-```
+Finalmente para concatenar os 4 anos execute
 
 ```bash
-dpm concat datapackages/planejamento*/**/datapackage.json --resource-name indicadores_planejamento --enrich ppag=period
-dpm concat datapackages/monitoramento*/**/datapackage.json --resource-name relacao_indicadores_apurados --enrich ppag=period
+make concat
 ```
+
+Serão gerados dois recursos descritos no arquivo `datapackage.json`.
