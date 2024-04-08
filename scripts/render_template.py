@@ -59,10 +59,11 @@ render_schema_monitoramento("monitoramento", "relacao_indicadores_apurados", 202
 
 render_schema_monitoramento("monitoramento", 
                             "acoes_monitoramento", 2023, 
-                            months = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out"])
+
+                            months = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"])
 
 render_schema_monitoramento("monitoramento", 
                             "localizadores_monitoramento_todos", 2023, 
-                            months = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out"])
+                            months = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"])
 
 render_schema_monitoramento("monitoramento", "relacao_indicadores_apurados", 2023)
