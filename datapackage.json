@@ -755,7 +755,7 @@
     {
       "name": "localizadores_todos_planejamento",
       "profile": "tabular-data-resource",
-      "path": "data/localizadores_monitoramento_todos.zip",
+      "path": "data/localizadores_monitoramento_todos.csv.zip",
       "format": "csv",
       "encoding": "utf-8",
       "schema": {
