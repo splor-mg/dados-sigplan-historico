@@ -1,4 +1,4 @@
-.PHONY: describe normalize planejamento monitoramento concat
+.PHONY: describe normalize planejamento monitoramento concat transform
 
 include config.mk
 
@@ -30,6 +30,5 @@ concat:
 	--resource-name localizadores_monitoramento_todos \
 	--enrich ppag=period
 
-
-
-
+transform:
+	Rscript scripts/export.R

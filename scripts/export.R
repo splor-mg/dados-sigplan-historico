@@ -1,12 +1,9 @@
-library(frictionless)
-library(dplyr)
+package <- frictionless::read_package("datapackage.json")
 
-package <- read_package("https://raw.githubusercontent.com/splor-mg/sigplan-dados-historico/main/datapackage.json")
+acoes_monitoramento <- frictionless::read_resource(package, "acoes_monitoramento")
 
-acoes_monitoramento <- read_resource(package, "acoes_monitoramento")
-
-acoes_monitoramento |> 
-  select(uo_acao_cod,
+acoes_monitoramento <- acoes_monitoramento |> 
+  dplyr::select(uo_acao_cod,
          uo_acao_nome,
          programa_cod,
          programa_desc,
@@ -20,10 +17,10 @@ acoes_monitoramento |>
          vlr_fisico_realizado, 
          ppag)
 
-relacao_indicadores_apurados <- read_resource(package, "relacao_indicadores_apurados")
+relacao_indicadores_apurados <- frictionless::read_resource(package, "relacao_indicadores_apurados")
 
-relacao_indicadores_apurados |> 
-  select(programa_cod,
+relacao_indicadores_apurados_distinct <- relacao_indicadores_apurados |> 
+  dplyr::distinct(programa_cod,
          programa_nome,
          indicador,
          unidade_de_medida,
@@ -32,5 +29,8 @@ relacao_indicadores_apurados |>
          indice_de_referencia,
          previsao_ano0,
          apurado_ano0,
-         notas_do_usuario
+         notas_do_usuario,
+         ppag
         )
+
+data.table::fwrite(relacao_indicadores_apurados_distinct, "data/relacao_indicadores_apurados_distinct.csv")
